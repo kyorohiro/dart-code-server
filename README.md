@@ -1,4 +1,4 @@
-Build dart's develop environment with vscode on docker by code-server
+Build dart's development environment with vscode on docker by code-server
 
 
 (1) run a docker image.
