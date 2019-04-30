@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update
-RUN apt-get install -y curl wget gnupg less lsof net-tools -y
+RUN apt-get install -y curl wget gnupg less lsof net-tools git apt-utils -y
 
 
 # WORKDIR
@@ -15,6 +15,10 @@ RUN sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debia
 RUN apt-get update
 RUN apt-get install dart -y
 ENV PATH="${PATH}:/usr/lib/dart/bin/"
+ENV PATH="${PATH}:/root/.pub-cache/bin"
+
+RUN pub global activate webdev
+RUN pub global activate stagehand
 
 #
 # CODE-SERVER
