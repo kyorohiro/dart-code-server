@@ -1,6 +1,7 @@
-# 
+build dart's develop environment with vscode in docker by code-server
 
-run a docker image.
+
+(1) run a docker image.
  
 ```
 git clone https://github.com/kyorohiro/dart-code-server.git
@@ -10,14 +11,14 @@ docker run -p 8443:8443 -p 8080:8080 -it dart_vscode bash
 ```
 
 
-run vscode at code-server
+(2) run vscode at code-server
 
 ```
 mkdir /works/w
 /works/code-server /works/w --allow-http --no-auth
 ```
 
-and open 'http://127.0.0.1:8443/' at your browser 
+(3) and open 'http://127.0.0.1:8443/' at your browser 
 
 ![](root_page.jpg)
 
@@ -27,9 +28,9 @@ and open 'http://127.0.0.1:8443/' at your browser
 ## Webdev
 
 
-1. Terminal -> New Terminal on VSCODE
+(1) Terminal -> New Terminal on VSCODE
 
-2. on Terminal
+(2) on Terminal
 
 ```
 root@8e5699b9caa4:/works/w# stagehand web-simple
@@ -38,6 +39,6 @@ root@8e5699b9caa4:/works/w# webdev serve --hostname=0.0.0.0
 
 ```
 
-3. open 'http://127.0.0.1:8080/' at your browser
+(3) and, open 'http://127.0.0.1:8080/' at your browser
 
 ![](sample_web.jpg)
