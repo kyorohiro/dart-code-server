@@ -42,3 +42,22 @@ root@8e5699b9caa4:/works/w# webdev serve --hostname=0.0.0.0
 (3) and, open 'http://127.0.0.1:8080/' at your browser
 
 ![](sample_web.jpg)
+
+
+
+# PS
+
+[a] restart a container
+
+```
+$ docker ps -a
+check id and
+$ docker exec -it < id > bash
+```
+
+[b] reset configure which like port and mount etc.
+$ docker commit < id > dart_vscode_xxx
+$ docker run -p 8443:8443 -p 8080:8080 -it dart_vscode_xxx bash
+
+[c] mount volume
+$ docker run -p 8443:8443 -p 8080:8080 -v /Users/kyorohiro/w/dart/xxx:/works/w -it dart_vscode bash
